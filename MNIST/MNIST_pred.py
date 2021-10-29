@@ -17,7 +17,7 @@ def image_preprocessing(image):
     return image
 
 if __name__ == "__main__":
-    model = ks.models.load_model('MNIST_CNN')
+    model = ks.models.load_model('MNIST_CNN_DTAG')
     img_path = input("Enter image path: ")
     img = load_and_scale_image(img_path)
     newimg = image_preprocessing(img)
