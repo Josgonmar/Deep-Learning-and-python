@@ -9,7 +9,7 @@ from tensorflow.keras import utils
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
 from tensorflow.keras.models import Sequential
 
-data_path = 'Headlines/'
+data_path = 'Training_data/'
 words_count = 0
 max_len = 0
 def import_headlines(data_path):
@@ -77,6 +77,7 @@ if __name__ == "__main__":
     mymodel = load_model('NYT_headlines_generator')
     text_seed = input('Enter seed text to predict: ')
     predict_text(all_headlines,text_seed,mymodel)
+    
     #Once the model is trained and done, these sentences are no longer needed
     #predictors = txt_sequence[:,:-1]
     #targets = txt_sequence[:,-1]
