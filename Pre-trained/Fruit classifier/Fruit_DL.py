@@ -44,7 +44,7 @@ def data_augmentation_and_training(model):
     valid_dataset = datagen.flow_from_directory('data/fruits/valid/', 
         target_size=(224,224), 
         color_mode='rgb', 
-       class_mode="categorical")
+        class_mode="categorical")
     model.fit(train_dataset,
           validation_data=valid_dataset,
           steps_per_epoch=train_dataset.samples/train_dataset.batch_size,

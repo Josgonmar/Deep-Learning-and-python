@@ -6,8 +6,7 @@ This folder contains two deep learning networks, that are supposed to work with 
 If you are in the mood, you can use the 'MNIST_pred.py' program to make a prediction with one of them (the default one is the CNN).
 ![alt text](https://github.com/Josgonmar/Deep-Learning-and-python/blob/main/Readme_files/Captura.PNG?raw=true)
 ## PRE-TRAINED:
-In this folder there are some projects that make use of some pre-trainend Deep Learning model from the tensorflow.keras library.
-In this case, it is just a program that tries to predict the type of animal is in the input image.
+In this folder there are some projects that make use of some pre-trainend Deep Learning models from the tensorflow.keras library for instance.
 ## TEXT GENERATOR
 A deep learning model trained to predict a headline, using training data from thousands of New York Times headlines.
 It is not very acurate, as not always the words hava a context or make sense inside the sentences, but it's fun to use.
@@ -15,3 +14,5 @@ Right now it predicts up to 5 more words added from the text seed you write as a
 ## LIBRARIES AND DEPENDENCIES:
 - Python 3.9 (thats the version I'm using)
 - Tensorflow 2
+- Pandas
+- Numpy
