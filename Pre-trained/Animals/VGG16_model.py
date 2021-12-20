@@ -3,9 +3,14 @@ from tensorflow.keras.applications import VGG16
 from tensorflow.keras.preprocessing import image as image_utils
 from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.applications.vgg16 import decode_predictions
+import matplotlib.pyplot as plt
 
 def process_image_for_input(image_path):
-    image = image_utils.load_img(image_path,target_size=(224,224))
+    image = image_utils.load_img('Images/' + image_path,target_size=(224,224))
+    ax = plt.subplot(1,1,1)
+    plt.imshow(image)
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
     image = image_utils.img_to_array(image)
     image = image.reshape(1,224,224,3)
     image = preprocess_input(image)

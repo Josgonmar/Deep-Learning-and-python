@@ -53,7 +53,7 @@ def data_augmentation_and_training(model):
     return model
     
 def make_prediction(model,image_path):
-    image_for_prediction = ks.preprocessing.image.load_img(image_path,target_size=(224,224))
+    image_for_prediction = ks.preprocessing.image.load_img('test/' + image_path,target_size=(224,224))
     image_for_prediction = ks.preprocessing.image.img_to_array(image_for_prediction)
     image_for_prediction = image_for_prediction.reshape(1,224,224,3)
     prediction = model.predict(image_for_prediction)
