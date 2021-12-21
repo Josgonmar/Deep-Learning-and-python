@@ -13,7 +13,7 @@ def preprocess_data(x_tr,x_va):
     x_va = x_va/255
     return(x_tr,x_va)
 
-def create_and_compile_model(x_tr,x_va):
+def create_and_compile_model():
     model = ks.Sequential()
     model.add(ks.layers.Dense(units=512,activation='relu',input_shape=(784,)))
     model.add(ks.layers.Dense(units=128,activation='relu'))
@@ -40,6 +40,6 @@ if __name__ == "__main__":
     predict_and_show(autoencoder)
     
     #This part is only needed while training the model
-    #autoencoder = create_and_compile_model(x_train,x_valid)
+    #autoencoder = create_and_compile_model()
     #autoencoder.fit(x_train,x_train,batch_size=256,epochs=50,verbose=1,validation_data=(x_valid,x_valid))
     #autoencoder.save('MNIST_AUTOENCODER')
